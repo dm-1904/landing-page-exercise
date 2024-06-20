@@ -1,6 +1,7 @@
 .enchilada {
   display: grid;
-
+  max-width: 1200px;
+  margin: auto;
 }
 
 .welcomebox {
@@ -110,6 +111,8 @@
   object-fit: cover;
   min-height: 110px;
   border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .sec2outer {
@@ -165,4 +168,25 @@
 
 .span1, .span2 {
   color: white;
+}
+
+@media (max-width: 700px) {
+  .iconbox{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "icon1"
+    "icon2"
+    "icon3";
+  }
+
+  .icon1, .icon2, .icon3 {
+    max-width: 95%;
+    min-width: 95%;
+    justify-self: center;
+    padding-bottom: 30px;
+  }
+
+  .icon2 {
+    margin: 20px 0px;
+  }
 }
